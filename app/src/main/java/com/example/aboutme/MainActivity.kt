@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val myName: MyName = MyName("Tiung Pei Ting")
+    private val myName: MyName = MyName("Mah Kah Hui")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,15 +33,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addNickname(view: View) {
-
-        binding.nicknameText.text = binding.nicknameEdit.text
-        binding.nicknameEdit.visibility = View.GONE
-        binding.doneButton.visibility = View.GONE
-        binding.nicknameText.visibility = View.VISIBLE
-        binding.nicknameText.text = binding.nicknameEdit.text.toString()
-
-
-
         binding.apply {
             myName?.nickname = nicknameEdit.text.toString()
             invalidateAll()
